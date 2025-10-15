@@ -6,7 +6,8 @@
 
 :root.theme-dark {
   --bg-image: url("../images/cover-image-dark.png");
-  --pink: rgba(255, 0, 112, 1);
-  --dark-pink: #DB00FF;
-  --dark-blue: rgba(0, 0, 40, 1);
+  --accent-color: rgba(255, 0, 112, 1);
+  --h1-color: #DB00FF;
+  --title-color: rgba(0, 0, 40, 1);
+  --article-color: rgba(241, 178, 206, 1);
 }

@@ -6,4 +6,16 @@
 
 :root.theme-light {
   --bg-image: url("../images/cover-image-light.png");
+  --accent-color: rgba(255, 141, 203, 1);
+  --h1-color: rgba(255, 194, 230, 1);
+  --title-color: rgba(53, 52, 48, 1);
+  --article-color: rgba(53, 52, 48, 1);
+}
+
+:root.theme-light .article-heading {
+  color: var(--title-color);
+}
+
+:root.theme-light .record-icon {
+  display: none;
 }
