@@ -12,10 +12,25 @@
   --article-color: rgba(53, 52, 48, 1);
 }
 
+:root.theme-light .header__theme-menu-button,
+:root.theme-light .header__theme-menu-button:hover, 
+:root.theme-light .header::before,
+:root.theme-light .header::after,
+:root.theme-light .footer::before,
+:root.theme-light .footer::after {
+  --accent-color: var(--title-color);
+}
+
 :root.theme-light .article-heading {
   color: var(--title-color);
 }
 
 :root.theme-light .record-icon {
   display: none;
+}
+
+@media (width < 1024px) {
+  :root.theme-light .header {
+    grid-template-rows: 0.7fr min-content 0.8fr;
+  }
 }
