@@ -7,7 +7,7 @@
   :root.theme-light {
     --bg-image: url("../images/cover-image-light.png");
     --accent-color: rgba(255, 141, 203, 1);
-    --h1-color: rgba(255, 194, 230, 1);
+    --main-heading-color: rgba(255, 194, 230, 1);
     --title-color: rgba(53, 52, 48, 1);
     --article-color: rgba(53, 52, 48, 1);
   }
@@ -24,12 +24,12 @@
 :root {
   --bg-image: url("../images/cover-image-dark.png");
   --accent-color: rgba(255, 0, 112, 1);
-  --h1-color: #DB00FF;
+  --main-heading-color: #DB00FF;
   --title-color: rgba(0, 0, 40, 1);
   --article-color: rgba(241, 178, 206, 1);
   --bold: 700;
   --light: 400;
-  --font: IBM Plex mono, sans-serif;
+  --font: IBM Plex mono, monospace;
   --text-font-size: 18px;
-  --margin-side: 10px;
+  --padding-side: 10px;
 }
