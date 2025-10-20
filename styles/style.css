@@ -367,5 +367,5 @@ h1 {
   .article-section:nth-child(2) .articles-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  } 
+  }
 }
