@@ -5,6 +5,7 @@
   font-family: var(--font);
   font-weight: var(--light);
   font-size: var(--text-font-size);
+  background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-position: center;
   background-size: cover;
@@ -13,15 +14,19 @@
   padding-bottom: 0;
 }
 
-h3, h4, h5 {
-  font-size: var(--text-font-size);
-}
+/* TODO:
+- before/after
+- light theme
+- article sections selector
+*/
 
 a {
   text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 a:hover {
-  border-bottom: 1px solid var(--article-color);
+  border-bottom: 1px solid currentColor;
 }
 
 a:focus {
@@ -40,7 +45,7 @@ a:focus {
   align-items: center;
   position: relative;
 }
-
+/* TODO */
 .header::before,
 .header::after,
 .footer::before,
@@ -111,10 +116,11 @@ a:focus {
 }
 
 .header__theme-menu-button:hover {
-  border: 0.5px solid currentColor;
+  border: 0.5px solid var(--button-hover-color);
 }
 
 .header__theme-menu-button:focus {
+  border: none;
   border-bottom: 0.5px solid currentColor;
 }
 
@@ -133,12 +139,12 @@ h1 {
 .title {
   background-color: var(--accent-color);
   inline-size: 355px;
-  block-size: 117px;
   color: var(--title-color);
   font-weight: var(--bold);
 }
 
 .title-text {
+  font-size: var(--text-font-size);
   max-inline-size: 90%;
   line-height: 24px;
 }
@@ -172,7 +178,19 @@ h1 {
 }
 
 .article-heading {
+  font-size: var(--text-font-size);
   color: var(--accent-color);
+}
+
+.block-heading { 
+  inline-size: 100%;
+  background-color: var(--accent-color);
+  color: var(--title-color);
+  font-size: var(--text-font-size);
+}
+
+.advice-heading {
+  font-weight: var(--light);
 }
 
 .article-section:nth-child(1) .article-heading,
@@ -184,26 +202,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.block-heading {
-  inline-size: 100%;
-  min-block-size: 23px;
-  background-color: var(--accent-color);
-}
-
-.block-heading h4,
-.block-heading h5 {
-  color: var(--title-color);
-  font-weight: var(--bold);
-}
-
-.block-heading .advice-heading {
-  font-weight: var(--light);
-}
-
-.extra-block-heading h4 {
-  font-weight: var(--bold);
 }
 
 .article-block-description {
@@ -282,7 +280,6 @@ h1 {
   }
 
   .article-section:nth-child(2) .article-heading {
-    min-block-size: 70px;
     max-inline-size: 20%;
   }
 
@@ -349,7 +346,6 @@ h1 {
   .title {
     margin-top: 2%;
     inline-size: 495px;
-    block-size: 71px;
     grid-column: 1;
     grid-row: 3;
     align-self: flex-start;
@@ -361,7 +357,6 @@ h1 {
 
   .article-section:nth-child(2) .article-heading {
     max-inline-size: 30%;
-    min-block-size: 45px;
   }
 
   .article-section:nth-child(2) .articles-container {

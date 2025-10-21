@@ -3,27 +3,11 @@
   и их переопределение под различные устройства
 */
 
-@media (prefers-color-scheme: light) {
-  :root.theme-light {
-    --bg-image: url("../images/cover-image-light.png");
-    --accent-color: rgba(255, 141, 203, 1);
-    --main-heading-color: rgba(255, 194, 230, 1);
-    --title-color: rgba(53, 52, 48, 1);
-    --article-color: rgba(53, 52, 48, 1);
-  }
-  
-  :root.theme-light .article-heading {
-    color: var(--title-color);
-  }
-
-  :root.theme-light .record-icon {
-    display: none;
-  }
-}
-
 :root {
   --bg-image: url("../images/cover-image-dark.png");
+  --bg-color: #000028;
   --accent-color: rgba(255, 0, 112, 1);
+  --button-hover-color: rgba(255, 0, 112, 0.4);
   --main-heading-color: #DB00FF;
   --title-color: rgba(0, 0, 40, 1);
   --article-color: rgba(241, 178, 206, 1);

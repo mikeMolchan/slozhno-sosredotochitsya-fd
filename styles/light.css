@@ -4,9 +4,31 @@
   переключая тему
 */
 
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --bg-image: url("../images/cover-image-light.png");
+    --bg-color: #fff1f7;
+    --accent-color: rgba(255, 141, 203, 1);
+    --button-hover-color: rgba(50, 49, 45, 0.4);
+    --main-heading-color: rgba(255, 194, 230, 1);
+    --title-color: rgba(53, 52, 48, 1);
+    --article-color: rgba(53, 52, 48, 1);
+  }
+  
+  :root.theme-light .article-heading {
+    color: var(--title-color);
+  }
+
+  :root.theme-light .record-icon {
+    display: none;
+  }
+}
+
 :root.theme-light {
   --bg-image: url("../images/cover-image-light.png");
+  --bg-color: #fff1f7;
   --accent-color: rgba(255, 141, 203, 1);
+  --button-hover-color: rgba(50, 49, 45, 0.4);
   --main-heading-color: rgba(255, 194, 230, 1);
   --title-color: rgba(53, 52, 48, 1);
   --article-color: rgba(53, 52, 48, 1);

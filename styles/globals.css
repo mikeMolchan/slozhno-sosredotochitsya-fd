@@ -1,4 +1,8 @@
 /* Глобальные стили для проекта, их можно дополнять и менять по желанию */
+html {
+  display: grid;
+  justify-content: center;
+}
 
 *,
 *::before,
