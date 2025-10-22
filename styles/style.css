@@ -172,7 +172,7 @@ h1 {
   color: var(--accent-color);
 }
 
-.block-heading { 
+.block-heading {
   inline-size: 100%;
   background-color: var(--accent-color);
   color: var(--title-color);
