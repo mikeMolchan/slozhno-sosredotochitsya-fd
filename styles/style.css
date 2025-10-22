@@ -14,12 +14,6 @@
   padding-bottom: 0;
 }
 
-/* TODO:
-- before/after
-- light theme
-- article sections selector
-*/
-
 a {
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
@@ -45,18 +39,13 @@ a:focus {
   align-items: center;
   position: relative;
 }
-/* TODO */
+
 .header::before,
-.header::after,
-.footer::before,
-.footer::after {
+.footer::before {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
-}
-
-.header::before, .footer::before {
   border-top: 1px solid var(--accent-color);
   border-right: 1px solid var(--accent-color);
   top: 0;
@@ -67,11 +56,16 @@ a:focus {
   top: 15px;
 }
 
-.header::after, .footer::after {
+.header::after,
+.footer::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
-  bottom: calc(var(--padding-side) * 2);
   left: 5px;
+  bottom: calc(var(--padding-side) * 2);
 }
 
 .footer::after {
@@ -173,10 +167,6 @@ h1 {
   gap: 20px;
 }
 
-.article-section:has(.extra-block-heading) {
-  grid-template-columns: repeat(2, min-content) repeat(auto-fit, 1fr);
-}
-
 .article-heading {
   font-size: var(--text-font-size);
   color: var(--accent-color);
@@ -193,8 +183,7 @@ h1 {
   font-weight: var(--light);
 }
 
-.article-section:nth-child(1) .article-heading,
-.article-section:nth-child(2) .article-heading {
+.heading-limited {
   max-inline-size: 90%;
 }
 
@@ -274,12 +263,11 @@ h1 {
     justify-self: flex-end;
   }
 
-  .article-section:nth-child(1), 
-  .article-section:nth-child(3) {
+  .article-section:nth-child(odd) {
     grid-template-columns: 0.98fr 2fr;
   }
 
-  .article-section:nth-child(2) .article-heading {
+  .article-section:nth-child(even) .article-heading {
     max-inline-size: 20%;
   }
 
@@ -355,11 +343,11 @@ h1 {
     max-inline-size: 100%;
   }
 
-  .article-section:nth-child(2) .article-heading {
+  .article-section:nth-child(even) .article-heading {
     max-inline-size: 30%;
   }
 
-  .article-section:nth-child(2) .articles-container {
+  .article-section:nth-child(even) .articles-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
