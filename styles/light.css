@@ -32,9 +32,21 @@
     --accent-color: var(--title-color);
   }
   
+
+
   @media (width < 1024px) {
     :root.theme-auto .header {
       grid-template-rows: 0.7fr min-content 0.8fr;
+    }
+
+    :root.theme-auto .header__theme-menu {
+      margin-top: 23%;
+    }
+  }
+
+  @media (width < 768px) {
+    :root.theme-auto .header__theme-menu {
+      margin-top: 17%;
     }
   }
 }
@@ -69,5 +81,15 @@
 @media (width < 1024px) {
   :root.theme-light .header {
     grid-template-rows: 0.7fr min-content 0.8fr;
+  }
+
+  :root.theme-light .header__theme-menu {
+    margin-top: 23%;
+  }
+}
+
+@media (width < 768px) {
+  :root.theme-light .header__theme-menu {
+    margin-top: 17%;
   }
 }
