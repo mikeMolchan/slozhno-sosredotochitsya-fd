@@ -32,8 +32,6 @@
     --accent-color: var(--title-color);
   }
   
-
-
   @media (width < 1024px) {
     :root.theme-auto .header {
       grid-template-rows: 0.7fr min-content 0.8fr;
